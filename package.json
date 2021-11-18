@@ -1,0 +1,30 @@
+{
+  "name": "mush",
+  "version": "1.0.0",
+  "description": "a mushy music player for discord et al.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tfilla1/mush.git"
+  },
+  "keywords": [
+    "mushy",
+    "music",
+    "player",
+    "discord"
+  ],
+  "author": "tfilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tfilla1/mush/issues"
+  },
+  "homepage": "https://github.com/tfilla1/mush#readme",
+  "dependencies": {
+    "@vue/cli": "^4.5.15",
+    "express": "^4.17.1",
+    "vue": "^2.6.14"
+  }
+}
