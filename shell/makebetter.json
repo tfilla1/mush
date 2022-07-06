@@ -1,57 +1,52 @@
 {
-    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-    "final_space": true,
-    "console_title": true,
-    "console_title_style": "folder",
-    "blocks": [
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
         {
-            "type": "prompt",
-            "alignment": "left",
-            "horizontal_offset": 0,
-            "vertical_offset": 0,
-            "segments": [
-                {
-                    "type": "text",
-                    "style": "plain",
-                    "foreground": "#ffffff",
-                    "properties": {
-                      "prefix": "",
-                      "postfix": "",
-                      "text": "<#e1a6f2>\u276F</><#92d192>\u276F</>"
-                    }
-                },
-                {
-                  "type": "path",
-                  "style": "plain",
-                  "foreground": "#6ab0f3",
-                  "properties": {
-                    "style": "folder"
-                  }
-                },
-                {
-                    "type": "git",
-                    "style": "plain",
-                    "foreground": "#92d192",
-                    "foreground_templates": [
-                        "{{ if .Working.Changed }}#f2777a{{else}}#92d192{{end}}"
-                    ],
-                    "properties": {    
-                        "fetch_status": true,
-                        "fetch_stash_count": true,
-                        "fetch_upstream_icon": true,
-                        "branch_icon": "",
-                        "template": "({{.HEAD}}) {{if .Working.Changed }}<#f2777a>\u276F</>{{ else }}<#92d192>\u276F</>{{end}}"
-                    }
-                },
-                {
-                  "type": "time",
-                  "style": "plain",
-                  "foreground": "#92d192",
-                  "properties": {
-                    "time_format": "15:04"
-                  }
-                }
-            ]
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "<#e1a6f2>\u276f</><#92d192>\u276f</>",
+          "type": "text"
+        },
+        {
+          "foreground": "#6ab0f3",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "plain",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "#92d192",
+          "foreground_templates": [
+            "{{ if .Working.Changed }}#f2777a{{else}}#92d192{{end}}"
+          ],
+          "properties": {
+            "branch_icon": "",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": "<#ffd479>git:</> ({{.HEAD}}) {{if .Working.Changed }}<#f2777a>\u276f</>{{ else }}<#92d192>\u276f</>{{end}} ",
+          "type": "git"
+        },
+        {
+          "foreground": "#92d192",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "style": "plain",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "type": "time"
         }
-    ]
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
 }

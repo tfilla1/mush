@@ -25,6 +25,7 @@
   "dependencies": {
     "@vue/cli": "^4.5.15",
     "express": "^4.17.1",
+    "http-proxy": "^1.18.1",
     "vue": "^2.6.14"
   }
 }
